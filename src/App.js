@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
 import Layout from './components/Layout';
 import Start from './views/Start';
+import Theme from './views/Theme';
 
 function App() {
+  const [currentView, setCurrentView] = useState('start');
 
   return (
     <Layout>
-      <Start />
+      {currentView === 'start' && <Start handleView={setCurrentView} />}
+      {currentView === 'theme' && <Theme handleView={setCurrentView} />}
     </Layout>
     
   );
