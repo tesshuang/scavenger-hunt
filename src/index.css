@@ -4,6 +4,8 @@
   --pink: #FF8577;
   --yellow: #FFC700;
   --purple: #C7B9FF;
+  --border-radius: 12px;
+  --border-style: 4px solid black;
 }
 
 body {
