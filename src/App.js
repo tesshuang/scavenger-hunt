@@ -5,11 +5,12 @@ import Theme from './views/Theme';
 
 function App() {
   const [currentView, setCurrentView] = useState('start');
-
+  const [gameTheme, setGameTheme] = useState('indoor');
+  console.log(gameTheme);
   return (
     <Layout>
       {currentView === 'start' && <Start handleView={setCurrentView} />}
-      {currentView === 'theme' && <Theme handleView={setCurrentView} />}
+      {currentView === 'theme' && <Theme handleView={setCurrentView} handleTheme={setGameTheme}/>}
     </Layout>
     
   );
