@@ -6,6 +6,7 @@
   --purple: #C7B9FF;
   --border-radius: 12px;
   --border-style: 4px solid black;
+  --font-size: max(1.25rem, 1.75rem);
 }
 
 body {
@@ -14,6 +15,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size);
+  font-weight: 700;
 }
 
 h1, h2, h3, h4 {

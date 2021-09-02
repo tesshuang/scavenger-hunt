@@ -11,6 +11,10 @@
   margin: 0.75rem auto 0;
 }
 
+.select > label {
+  font-size: max(1rem, 1.25rem);
+}
+
 .select > select {
   width: 100%;
   appearance: none;
@@ -20,8 +24,8 @@
   border-radius: var(--border-radius);
   background-color: var(--yellow);
   padding: 1rem 0.5rem;
-  font-size: 24px;
-  font-weight: 700;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 .select >  select::-ms-expand {

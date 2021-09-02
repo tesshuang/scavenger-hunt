@@ -3,6 +3,10 @@
   text-align: left;
 }
 
+.container > label {
+  font-size: max(1rem, 1.25rem);
+}
+
 .input {
   display: block;
   width: 100%;
@@ -12,6 +16,6 @@
   padding: 1rem 2rem;
   margin: 0.75rem auto 0;
   color: white;
-  font-size: 24px;
+  font-size: inherit;
   font-weight: 700;
 }
