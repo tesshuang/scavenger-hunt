@@ -22,7 +22,7 @@ const Players = ({ handleView, players, handlePlayers }) => {
       {players.length > 0 && (
         <div>
           {players.map((player, index) => (
-            <div key={index}>{player}</div>
+            <div key={index}>{player} <Button label="&times;" onClick={() => handleView('theme')} btnType="circle" /></div>
           ))}
         </div>
       )}

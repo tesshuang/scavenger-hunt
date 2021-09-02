@@ -3,6 +3,15 @@
   background-color: var(--purple);
   font-size: 24px;
   font-weight: 700;
+}
+
+.regular {
   border-radius: 36px;
   padding: 16px 32px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%
 }
