@@ -7,7 +7,7 @@ import Input from '../components/Input';
 const Players = ({ handleView, players, handlePlayers }) => {
   const [name, setName] = useState('');
 
-  const addPlayers = (e) => {
+  const addPlayer = (e) => {
     if(e.key === 'Enter' && name !== '') {
       console.log('enter a new player');
       handlePlayers([...players, name]);
@@ -15,14 +15,25 @@ const Players = ({ handleView, players, handlePlayers }) => {
     }
   }
 
+  const removePlayer = (curPlayer) => {
+    handlePlayers(players.filter(player => player !== curPlayer));
+  }
+
   return (
     <div>
       <Heading title="Players" />
-      <Input label="Enter some players" onChange={(e) => setName(e.target.value)} onKeyPress={addPlayers} initialValue={name}/>
+      <Input
+        label="Enter some players"
+        initialValue={name}
+        onChange={(e) => setName(e.target.value)}
+        onKeyPress={(e) => addPlayer(e)} />
       {players.length > 0 && (
         <div>
           {players.map((player, index) => (
-            <div key={index}>{player} <Button label="&times;" onClick={() => handleView('theme')} btnType="circle" /></div>
+            <div key={index}>
+              <span>{player}</span> 
+              <Button label="&times;" onClick={() => removePlayer(player)} btnType="circle" />
+            </div>
           ))}
         </div>
       )}
