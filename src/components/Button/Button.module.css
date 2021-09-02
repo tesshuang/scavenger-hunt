@@ -3,6 +3,7 @@
   background-color: var(--purple);
   font-size: inherit;
   font-weight: inherit;
+  cursor: pointer;
 }
 
 .regular {
